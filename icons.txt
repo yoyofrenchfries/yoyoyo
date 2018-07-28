@@ -1,0 +1,6 @@
+<i class="fab fa-facebook-square"></i>
+<i class="fab fa-github"></i>
+<i class="fab fa-linkedin"></i>
+<i class="fab fa-android"></i>  
+<i class="far fa-envelope"></i>
+<i class="fab fa-twitter"></i>

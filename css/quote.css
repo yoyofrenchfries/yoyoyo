@@ -1,0 +1,449 @@
+/*-------------------------*/
+/* start from quote
+ * $quote
+ * i don't know why html can't read quote part in Component.css!
+---------------------------*/
+.quote{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	/*background-color: #f8ecc9;*/
+	background-color: #fff;
+}
+@media (max-width:768px) {
+	.quote{
+		padding-top:40px;
+		padding-bottom: 40px;
+	}
+}
+.quote__content{
+	color: #9B8281;
+}
+.quote__icon{
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background-color: #9B8281;
+	text-align: center;
+	line-height: 64px;
+	font-size: 32px;
+	color: #FFFFFF;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 24px;
+}
+.quote__text{
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	margin-bottom: 24px;
+}
+.quote__name{
+	text-align: center;
+}
+.quote__name span{
+	color: #fbafaf;
+}
+.skill{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+@media (max-width:768px) {
+	.skill{
+		padding-top:40px;
+		padding-bottom: 40px;
+	}
+}
+.skill-card{
+	/*border: 1px solid #000;*/
+	/*留給圖片的預留空間*/
+	padding-left: 32px;
+	margin-bottom: 32px;
+}
+.skill-group{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.skill-card__inner{
+	background-color: #fefefe;
+	border-radius: 4px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+	padding: 24px;
+	padding-left: 48px;
+}
+.skill-card__title{
+	color: #FBAFAF;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+.skill-card__text{
+	margin: 0;
+}
+.skill-card__icon{
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #99e1e5;
+}
+.skill-card__icon .image{
+	position: absolute;
+	/*置中定位*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 60%;
+}
+@media (max-width: 768px) {
+	.skill-card__icon{
+		top: 0;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.skill-card{
+		padding: 0;
+		margin-top: 48px;
+	}
+	.skill-card__inner{
+		padding: 24px;
+		padding-top: 48px;
+	}
+	.skill-group{
+		padding-bottom: 0;
+	}
+}
+/*experience*/
+.experience	{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+@media (max-width:768px){
+	.experience{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	}
+}
+/*timeline*/
+.timeline-group{
+	/*border: 1px solid #000;*/
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 120px;
+}
+.timeline{
+	width: 4px;
+	height: 100%;
+	background-color: #fbafaf;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 3px 10px rbga(0,0,0,0.5);
+}
+.timeline-cards__row:nth-child(odd){
+	display: flex;
+	justify-content: flex-start;
+}
+.timeline-cards__row:nth-child(even){
+	display: flex;
+	justify-content: flex-end;
+}
+/*點做在卡片上*/
+.timeline-card{
+	padding: 24px;
+	background-color: #fefefe;
+	border-radius: 4px;
+	width: calc(50% - 24px);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+.timeline-card:before{
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #fbafaf;
+	position: absolute;
+	top: 50%;
+	/*往右加目前-24px的一半=>到中間!*/
+	
+	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+/*Selects all odd elements where the parent is a timeline-cards__row element*/
+.timeline-cards__row:nth-child(odd) > :before{
+	transform: translate(50%,-50%);
+	right: -24px;
+}
+.timeline-cards__row:nth-child(even) > :before{
+	transform: translate(-50%,-50%);
+	left: -24px;
+}
+.timeline-card__text{
+	margin: 0;
+}
+@media (max-width:768px){
+	.timeline{
+		left: 0;
+	}
+	.timeline-card{
+		width: calc(100% - 24px);
+		margin-bottom: 24px;
+	}
+	/*子代選擇器只能選依序排列的東西!*/
+	.timeline-cards__row:last-child .timeline-card{
+		margin-bottom: 0;
+	}
+	.timeline-cards__row:nth-child(odd){
+		justify-content: flex-end;
+	}
+	.timeline-cards__row:nth-child(odd) > :before{
+		transform: translate(-50%,-50%);
+		left: -24px;
+	}
+}
+/*work*/
+.work{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+@media (max-width:768px){
+	.work{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+/*worklist*/
+.work-list{
+	padding-top: 80px;
+}
+.work-item{
+	margin-bottom: 160px;
+}
+.work-item__text{
+	padding-top: 24px;
+}
+.work-item__text--right{
+	text-align: right;
+}
+.work-item__title{
+	font-size: 40px;
+	font-family:  "Nanum Gothic","Noto Sans TC","Helvetica","Roboto", "Arial", sans-serif;
+	color: #9B8281;
+}
+.work-item__title--right{
+	margin-right: -80px;
+}
+.work-item__title--left{
+	margin-left: -80px;
+}
+.work-item__intro{
+	font-size: 16px;
+	line-height: 32px;
+}
+@media (max-width:768px){
+	.work-item{
+		margin-bottom: 48px;
+	}
+	.work-item__text--right{
+		text-align: left;
+	}
+	.work-item__title{
+		font-size: 24px;
+		line-height: 32px;
+		margin-top: 0;
+		margin-bottom: 8px;
+	}
+	.work-item__title--right{
+		margin-right: 0;
+	}
+	.work-item__title--left{
+		margin-left: 0;
+	}
+}
+/*contact*/
+.contact{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+@media (max-width:768px){
+	.contact{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+}
+/*form*/
+.form{
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form textarea{
+	padding: 8px 16px;
+	display: inline-block;
+	border: 2px solid #9B8281;
+	border-radius: 4px;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 16px;
+	background-color: inherit;
+	color: #9B8281;
+}
+.form textarea{
+	resize: none;
+}
+.form input[type="text"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus{
+	outline: 0;
+	border:2px solid #fbafaf;
+}
+.form label{
+	margin-bottom: 8px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #9B8281;
+	font-family: "Nanum Gothic","Noto Sans TC","Helvetica","Roboto", "Arial", sans-serif;
+	font-weight: 700;
+}
+.form__bt-group{
+	margin-top: 32px;
+}
+/*divide-text*/
+.divide-text{
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	font-size: 28px;
+	line-height: 32px;
+	color: #9B8281;
+}
+/*info*/
+.info{
+	text-align: center;
+}
+.info__email{
+	margin-bottom: 16px;
+}
+.info__email a{
+	color: #9B8281;
+	font-size: 18px;
+	font-weight: 400;
+	display: block;
+	text-decoration: none;
+}
+.info__twitter{
+	margin-bottom: 16px;
+}
+.social-bar.info__social-bar a{
+	text-align: center;
+	/*text-indent: -16px;*/
+}
+.info__twitter .icon-bt,
+.info__social-bar .icon-bt{
+	color: #9B8281;
+}
+/*footer*/
+.footer{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.final-text{
+	text-align: center;
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.copyright{
+	text-align: center;
+}
+/*lean bg*/
+.radius-bg--top:before,
+.radius-bg--bottom:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 90px;
+	background-color: #fff;
+}
+@media (max-width: 768px) {
+	.radius-bg--top:before,
+	.radius-bg--bottom:after{
+	height: 60px;
+}
+}
+.radius-bg--top:before{
+	top: 0;
+	transform: translateY(-50%);
+	border-radius:20% 20% 0 0;
+}
+.radius-bg--bottom:after{
+	bottom: 0;
+	transform: translateY(50%);
+	border-radius:0 0 20% 20%;
+}
+
+.radius-bg--no-margin{
+	margin: 0;
+}
+.radius-bg--bottom{
+	margin-bottom: 120px;
+}
+.radius-bg--top{
+	margin-top: 120px;
+}
+@media (max-width:480px){
+	.radius-bg--top{
+	margin-top: 10px;
+}
+}
+@media (min-width:480px) and (max-width:768px){
+	.radius-bg--top{
+	margin-top: 80px;
+}
+.radius-bg--bottom{
+	margin-bottom: 80px;
+}
+}
+/*-------------------------*/
+/* $parallax graphic
+---------------------------*/
+[class^="graphic_"]{
+    position: absolute;
+}
+@media (max-width: 768px){
+    [class^="graphic_"]{
+        transform: scale(0.5);
+    }
+}
+.graphic_001{top: 20%;left: 5%;}
+.graphic_002{top: 75%;left: 38%;}
+.graphic_003{top: -120%;right: 15%;}
+.graphic_004{top: -10%;left: 55%;}
+.graphic_005{bottom: 20%;left: 5%;}
+.graphic_006{bottom: 60%;left: 4%;}
+.graphic_007{top: -20%;right: 10%;}
+.graphic_008{top: 10%;right: 10%;}
+.graphic_009{bottom: 50%;left: 5%;}
+.graphic_010{bottom: -10%;right: 20%;}
+.graphic_011{top: 5%;left: 10%;}
+.graphic_012{top: 8%;left: 8%;}
+.graphic_013{top: 33%;right: 10%;}
+.graphic_014{top: 48%;left: 10%;}
+.graphic_015{top: 76%;right: 5%;}
+.graphic_016{top: 76%;right: 10%;}
+.graphic_017{top: 50%;left: 8%;}
+.graphic_018{top: 91%;left: 3%;}
+.graphic_019{top: 95%;left: 11%;}
+.graphic_020{top: 0%;right: 20%;}
+.graphic_021{top: 30%;left: 10%;}
+.graphic_022{top: 35%;left: 10%;}
+.graphic_023{top: 87%;right: 15%;}
+.graphic_024{top: 70%;right: 10%;}
